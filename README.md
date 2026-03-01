@@ -1,25 +1,175 @@
-# Laravel + React Starter Kit
+Modern Full-Stack CRUD Application built with Laravel 12 + Inertia + React
 
-## Introduction
+📌 Overview
 
-Our React starter kit provides a robust, modern starting point for building Laravel applications with a React frontend using [Inertia](https://inertiajs.com).
+This project is a modern SPA (Single Page Application) built using:
 
-Inertia allows you to build modern, single-page React applications using classic server-side routing and controllers. This lets you enjoy the frontend power of React combined with the incredible backend productivity of Laravel and lightning-fast Vite compilation.
+Laravel 12 (Backend)
 
-This React starter kit utilizes React 19, TypeScript, Tailwind, and the [shadcn/ui](https://ui.shadcn.com) and [radix-ui](https://www.radix-ui.com) component libraries.
+Inertia.js (SPA Bridge)
 
-## Official Documentation
+React 19 + TypeScript
 
-Documentation for all Laravel starter kits can be found on the [Laravel website](https://laravel.com/docs/starter-kits).
+ShadCN UI
 
-## Contributing
+Tailwind CSS 4
 
-Thank you for considering contributing to our starter kit! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+SQLite Database
 
-## Code of Conduct
+The application demonstrates a complete CRUD system with clean UI, validation handling, and flash messaging.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+✨ Features
 
-## License
+✅ Create Product
 
-The Laravel + React starter kit is open-sourced software licensed under the MIT license.
+✅ Read Product List
+
+✅ Update Product
+
+✅ Delete Product
+
+✅ Server-side Validation
+
+✅ Flash Notifications
+
+✅ Inertia SPA Navigation
+
+✅ Type-safe React Components (TypeScript)
+
+✅ Clean UI using ShadCN
+
+🛠 Tech Stack
+Backend
+
+PHP 8.2
+
+Laravel 12
+
+Inertia Laravel
+
+Eloquent ORM
+
+SQLite Database
+
+Frontend
+
+React 19
+
+TypeScript
+
+Inertia React
+
+ShadCN UI
+
+Lucide Icons
+
+Tailwind CSS 4
+
+Vite
+
+🏗 Architecture
+
+This project follows:
+
+MVC Pattern (Laravel)
+
+Component-based architecture (React)
+
+SPA behavior powered by Inertia
+
+RESTful routing
+
+Flow:
+
+Client (React)
+↓
+Inertia
+↓
+Laravel Controller
+↓
+Database
+
+📂 Project Structure
+app/
+ ├── Http/Controllers/ProductController.php
+ ├── Models/Product.php
+
+resources/js/
+ ├── layouts/
+ ├── components/ui/
+ ├── Pages/Products/
+ │    ├── Index.tsx
+ │    ├── Create.tsx
+ │    └── Edit.tsx
+⚙️ Installation
+git clone https://github.com/yourusername/product-management-app.git
+cd product-management-app
+
+composer install
+npm install
+
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+
+npm run dev
+php artisan serve
+
+Open:
+http://localhost:8000
+
+🧪 Validation Rules
+'name' => 'required|string|max:225',
+'price' => 'required|numeric',
+'description' => 'nullable|string',
+📌 Routes
+GET     /products
+GET     /products/create
+POST    /products
+GET     /products/{id}/edit
+PUT     /products/{id}
+DELETE  /products/{id}
+📸 Screenshots
+
+(Add your UI screenshot here)
+
+🎯 Learning Objectives
+
+This project was built to practice:
+
+Building full-stack applications with Laravel + React
+
+Implementing SPA architecture without API boilerplate
+
+Form handling & validation with Inertia
+
+Component-driven UI development
+
+Clean code & project structuring
+
+🔮 Future Improvements
+
+Pagination
+
+Search & filtering
+
+Authentication role system
+
+API endpoint version
+
+Unit & Feature testing
+
+Deployment to VPS / Cloud
+
+👨‍💻 Author
+
+Your Name
+GitHub: https://github.com/yourusername
+
+## 📊 Development Notes
+
+- Uses Inertia to eliminate REST API complexity
+- Form state handled with useForm hook
+- Validation errors handled automatically via Inertia response
+- Flash messages managed through shared props
+- Uses SQLite for lightweight development# inventaris
