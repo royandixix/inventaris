@@ -5,6 +5,12 @@ import { createRoot } from 'react-dom/client';
 import '../css/app.css';
 import { initializeTheme } from '@/hooks/use-appearance';
 
+// Tambahkan import ini agar route() bisa dikenali
+import { route as routeFn } from 'ziggy-js';
+
+// Daftarkan secara global
+window.route = routeFn;
+
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
 createInertiaApp({
@@ -28,5 +34,4 @@ createInertiaApp({
     },
 });
 
-// This will set light / dark mode on load...
 initializeTheme();
