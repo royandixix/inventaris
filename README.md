@@ -1,176 +1,172 @@
-Modern Full-Stack CRUD Application built with Laravel 12 + Inertia + React
+# 🗂️ Inventaris — Product Management App
 
-📌 Overview
+> Modern Full-Stack CRUD Application built with **Laravel 12 + Inertia.js + React 19**
 
-This project is a modern SPA (Single Page Application) built using:
+---
 
-Laravel 12 (Backend)
+## 📌 Overview
 
-Inertia.js (SPA Bridge)
+A clean and modern **Single Page Application (SPA)** that demonstrates a complete product management system with server-side validation, flash messaging, and a polished UI — all without the overhead of a REST API.
 
-React 19 + TypeScript
+---
 
-ShadCN UI
+## ✨ Features
 
-Tailwind CSS 4
+| Feature | Status |
+|---|---|
+| Create Product | ✅ |
+| Read Product List | ✅ |
+| Update Product | ✅ |
+| Delete Product | ✅ |
+| Server-side Validation | ✅ |
+| Flash Notifications | ✅ |
+| Inertia SPA Navigation | ✅ |
+| Type-safe React Components | ✅ |
+| Clean UI with ShadCN | ✅ |
 
-SQLite Database
+---
 
-The application demonstrates a complete CRUD system with clean UI, validation handling, and flash messaging.
+## 🛠️ Tech Stack
 
-✨ Features
+**Backend**
+- PHP 8.2
+- Laravel 12
+- Inertia Laravel
+- Eloquent ORM
+- SQLite
 
-✅ Create Product
+**Frontend**
+- React 19 + TypeScript
+- Inertia React
+- ShadCN UI
+- Lucide Icons
+- Tailwind CSS 4
+- Vite
 
-✅ Read Product List
+---
 
-✅ Update Product
+## 🏗️ Architecture
 
-✅ Delete Product
+This project follows **MVC** (Laravel) + **Component-based** (React) architecture, powered by Inertia.js as the SPA bridge.
 
-✅ Server-side Validation
-
-✅ Flash Notifications
-
-✅ Inertia SPA Navigation
-
-✅ Type-safe React Components (TypeScript)
-
-✅ Clean UI using ShadCN
-
-🛠 Tech Stack
-Backend
-
-PHP 8.2
-
-Laravel 12
-
-Inertia Laravel
-
-Eloquent ORM
-
-SQLite Database
-
-Frontend
-
-React 19
-
-TypeScript
-
-Inertia React
-
-ShadCN UI
-
-Lucide Icons
-
-Tailwind CSS 4
-
-Vite
-
-🏗 Architecture
-
-This project follows:
-
-MVC Pattern (Laravel)
-
-Component-based architecture (React)
-
-SPA behavior powered by Inertia
-
-RESTful routing
-
-Flow:
-
+```
 Client (React)
-↓
-Inertia
-↓
+     ↓
+  Inertia.js
+     ↓
 Laravel Controller
-↓
-Database
+     ↓
+   Database
+```
 
-📂 Project Structure
+---
+
+## 📂 Project Structure
+
+```
 app/
- ├── Http/Controllers/ProductController.php
- ├── Models/Product.php
+├── Http/Controllers/ProductController.php
+└── Models/Product.php
 
 resources/js/
- ├── layouts/
- ├── components/ui/
- ├── Pages/Products/
- │    ├── Index.tsx
- │    ├── Create.tsx
- │    └── Edit.tsx
-⚙️ Installation
-git clone https://github.com/yourusername/product-management-app.git
-cd product-management-app
+├── layouts/
+├── components/ui/
+└── Pages/Products/
+    ├── Index.tsx
+    ├── Create.tsx
+    └── Edit.tsx
+```
 
+---
+
+## ⚙️ Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/yourusername/inventaris.git
+cd inventaris
+
+# 2. Install dependencies
 composer install
 npm install
 
+# 3. Environment setup
 cp .env.example .env
 php artisan key:generate
 php artisan migrate
 
+# 4. Run the development server
 npm run dev
 php artisan serve
+```
 
-Open:
-http://localhost:8000
+Open your browser at: **http://localhost:8000**
 
-🧪 Validation Rules
-'name' => 'required|string|max:225',
-'price' => 'required|numeric',
+---
+
+## 🧪 Validation Rules
+
+```php
+'name'        => 'required|string|max:225',
+'price'       => 'required|numeric',
 'description' => 'nullable|string',
-📌 Routes
-GET     /products
-GET     /products/create
-POST    /products
-GET     /products/{id}/edit
-PUT     /products/{id}
-DELETE  /products/{id}
-📸 Screenshots
+```
 
-(Add your UI screenshot here)
+---
 
-🎯 Learning Objectives
+## 📌 Routes
+
+```
+GET     /products               → Product list
+GET     /products/create        → Create form
+POST    /products               → Store product
+GET     /products/{id}/edit     → Edit form
+PUT     /products/{id}          → Update product
+DELETE  /products/{id}          → Delete product
+```
+
+---
+
+## 📸 Screenshots
+
+> _Add your UI screenshot here_
+
+---
+
+## 🎯 Learning Objectives
 
 This project was built to practice:
 
-Building full-stack applications with Laravel + React
+- Building full-stack apps with Laravel + React
+- Implementing SPA architecture **without** API boilerplate
+- Form handling & validation with Inertia
+- Component-driven UI development
+- Clean code & project structuring
 
-Implementing SPA architecture without API boilerplate
+---
 
-Form handling & validation with Inertia
+## 🔮 Future Improvements
 
-Component-driven UI development
+- [ ] Pagination
+- [ ] Search & filtering
+- [ ] Authentication & role system
+- [ ] REST API version
+- [ ] Unit & Feature testing
+- [ ] Deployment to VPS / Cloud
 
-Clean code & project structuring
-
-🔮 Future Improvements
-
-Pagination
-
-Search & filtering
-
-Authentication role system
-
-API endpoint version
-
-Unit & Feature testing
-
-Deployment to VPS / Cloud
-
-👨‍💻 Author
-
-Your Name
-GitHub: https://github.com/yourusername
+---
 
 ## 📊 Development Notes
 
-- Uses Inertia to eliminate REST API complexity
-- Form state handled with useForm hook
+- Uses **Inertia.js** to eliminate REST API complexity
+- Form state managed with `useForm` hook
 - Validation errors handled automatically via Inertia response
 - Flash messages managed through shared props
-- Uses SQLite for lightweight development# inventaris
-# inventaris
+- SQLite used for lightweight local development
+
+---
+
+## 👨‍💻 Author
+
+**Your Name**  
+GitHub: [@yourusername](https://github.com/yourusername)
