@@ -173,3 +173,4 @@ GitHub: https://github.com/yourusername
 - Validation errors handled automatically via Inertia response
 - Flash messages managed through shared props
 - Uses SQLite for lightweight development# inventaris
+# inventaris
